@@ -8,7 +8,7 @@ interface ButtonProps {
 
 const Button: React.FC<ButtonProps> = ({ text, icon, path }) => {
     return (
-        <StyledButton to={path}>
+        <StyledButton to={path || "/"}>
             {text}
             {icon}
         </StyledButton>

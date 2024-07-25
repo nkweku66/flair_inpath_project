@@ -1,11 +1,7 @@
 import styled from "styled-components"
-import { FaArrowLeft, FaCaretDown, FaEyeDropper, FaEyeSlash } from "react-icons/fa6";
+import { FaArrowLeft, FaCaretDown, FaEyeSlash } from "react-icons/fa6";
 import PhoneInputWithCountrySelect from "react-phone-number-input";
 import { Link } from 'react-router-dom'
-
-interface FormProps {
-    highlight?: boolean;
-}
 
 const Form = styled.form`
     display: flex;
