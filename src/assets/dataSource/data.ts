@@ -52,4 +52,45 @@ export const careerStatus = [
         "Key": 4,
         "option": "Experienced Professional"
     }
+];
+
+export const profileDetails = [
+    {
+        "key": 1,
+        "heading": "Education",
+        "details": "School info, field of study",
+        "icon": "../src/assets/images/icon-1.png"
+        
+    },
+    {
+        "key": 2,
+        "heading": "Work Experience",
+        "details": "Where you've worked, your role",
+        "icon": "../src/assets/images/icon-2.png"
+    },
+    {
+        "key": 3,
+        "heading": "Interests& Skills",
+        "details": "Career interests and skillset",
+        "icon": "../src/assets/images/icon-3.png"
+    },
+    {
+        "key": 4,
+        "heading": "Certifications",
+        "details": "Certifications worth highlighting",
+        "icon": "../src/assets/images/icon-4.png"
+    },
+    {
+        "key": 5,
+        "heading": "Accomplishments",
+        "details": "Personal achievements & impact",
+        "icon": "../src/assets/images/icon-5.png"
+    },
+    {
+        "key": 6,
+        "heading": "Upload Resume",
+        "details": "CV, portfolio",
+        "icon": "../src/assets/images/icon-6.png"
+    }
 ]
+

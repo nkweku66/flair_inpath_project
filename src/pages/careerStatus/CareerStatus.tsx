@@ -36,7 +36,7 @@ const CareerStatus = () => {
                     </S.CareerHeading>
                     {Careers}
                 </S.CareerContainer>
-                <Button text="Continue" />
+                <Button text="Continue" path="/profile" />
             </S.Wrapper>
         </>
     )

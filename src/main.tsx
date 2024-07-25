@@ -8,6 +8,7 @@ import CreateAccount from './pages/createAccount/CreateAccount.tsx'
 import GlobalStyles from './App.styles'
 import Verification from './pages/verification/VerificationPage.tsx'
 import CareerStatus from './pages/careerStatus/CareerStatus.tsx'
+import ProfilePage from './pages/profile/ProfilePage.tsx'
 
 const router = createBrowserRouter([
   {
@@ -45,8 +46,11 @@ const router = createBrowserRouter([
   {
     path: '/career',
     element: <CareerStatus />
+  },
+  {
+    path: '/profile',
+    element: <ProfilePage />
   }
-
 ])
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

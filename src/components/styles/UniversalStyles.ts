@@ -1,10 +1,11 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 
 interface Props {
     bold?: boolean;
 }
 
-const StyledButton = styled.button`
+const StyledButton = styled(Link)`
     width: 100%;
     display: flex;
     justify-content: center;
@@ -18,6 +19,7 @@ const StyledButton = styled.button`
     margin: 32px 0 62px 0;
     padding: 14px 0;
     cursor: pointer;
+    text-decoration: none;
     transition: .5s ease-in-out;
 
     &:hover{
@@ -46,9 +48,26 @@ const Colored = styled.span<Props>`
     color: #0B8659;
 `
 
+const CircleWrapper = styled.div<{ size?: number }>`
+    position: relative;
+    display: inline-block;
+    width: ${(props) => props.size}px;
+    height: ${(props) => props.size}px;
+`;
+
+const Circle = styled.svg<{ size?: number }>`
+    transform: rotate(-90deg);
+    overflow: visible;
+    width: ${(props) => props.size}px;
+    height: ${(props) => props.size}px;
+`;
+
+
 export {
     StyledButton,
     ImageWrapper,
     Logo,
-    Colored
+    Colored,
+    CircleWrapper,
+    Circle
 }
