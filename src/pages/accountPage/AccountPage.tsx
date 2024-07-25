@@ -37,7 +37,7 @@ const AccountPage = () => {
         <>
             <GlobalStyles />
             <S.ImageWrapper>
-                <S.Logo src="./src/assets/images/logo.png"/>
+                <S.Logo src="../images/logo.png"/>
             </S.ImageWrapper>  
             <S.AccountWrapper>
                 <S.Text>What type of account are you setting up</S.Text>

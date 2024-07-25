@@ -31,7 +31,7 @@ const NavBar = () => {
                 <S.HeaderName >For Partners</S.HeaderName>
             </S.Header>
             <S.NavBarContainer>
-                <S.NavBarLogo src="./src/assets/images/logo.png" />
+                <S.NavBarLogo src="../images/logo.png" />
                 <S.NavBarMenu>
                     <S.HamburgerMenu onClick={toggleMenu} openMenu={openMenu}>
                         <S.HamburgerLines openMenu={openMenu} />

@@ -7,7 +7,7 @@ const LogoSection = (props: Props) => {
     return (
         <ImageWrapper>
             {props.children}
-            <Logo src="./src/assets/images/logo.png"/>
+            <Logo src="../images/logo.png"/>
         </ImageWrapper>
     )
 }
