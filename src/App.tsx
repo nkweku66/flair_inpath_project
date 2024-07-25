@@ -1,13 +1,11 @@
-import Navbar from "./components/navbar/Navbar"
 import GlobalStyles from "./App.styles"
-import SearchSection from "./components/searchTool/SearchSection"
+import { Outlet } from 'react-router-dom'
 
 const App: React.FC = () => {
   return (
     <>
-      <GlobalStyles />
-      <Navbar />
-      <SearchSection />
+       <GlobalStyles />
+       <Outlet />
     </>
   )
 }
