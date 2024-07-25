@@ -34,3 +34,22 @@ export default [
         isTrue: true
     }
 ];
+
+export const careerStatus = [
+    {
+        "Key": 1,
+        "option": "Still in school"
+    },
+    {
+        "Key": 2,
+        "option": "Currently doing National Service"
+    },
+    {
+        "Key": 3,
+        "option": "Done with National Service"
+    },
+    {
+        "Key": 4,
+        "option": "Experienced Professional"
+    }
+]

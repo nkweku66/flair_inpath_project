@@ -1,12 +1,13 @@
-import { Colored } from "./components/styles/UniversalStyles"
+import { Colored } from "../styles/UniversalStyles"
 
 interface Props {
     text?: string;
+    bold?: boolean;
 }
 
-const Colored = ({text}: Props) => {
+const Color = ({text, bold}: Props) => {
     return (
-        <Colored>{text}</Colored>
+        <Colored bold={bold}>{text}</Colored>
     )
 }
-export { Colored }
+export default Color;

@@ -1,6 +1,10 @@
 import styled from 'styled-components'
 
-const Button = styled.button`
+interface Props {
+    bold?: boolean;
+}
+
+const StyledButton = styled.button`
     width: 100%;
     display: flex;
     justify-content: center;
@@ -37,12 +41,13 @@ const Logo = styled.img`
     margin: 0 auto;
 `
 
-const Colored = styled.span`
+const Colored = styled.span<Props>`
+    font-weight: ${props => props.bold ? '700' : '400'};
     color: #0B8659;
 `
 
 export {
-    Button,
+    StyledButton,
     ImageWrapper,
     Logo,
     Colored

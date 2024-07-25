@@ -1,17 +1,16 @@
-import * as S from "../styles/UniversalStyles"
+import { StyledButton } from "../styles/UniversalStyles"
 
 interface ButtonProps {
     text?: string;
-    icon?: boolean;
-    to?: string;
+    icon?: JSX.Element;
 }
 
-const Button:React.FC = (props: ButtonProps) => {
+const Button: React.FC<ButtonProps> = ({ text, icon }) => {
     return (
-        <S.Button>
-            {props.text}
-            {props.icon}
-        </S.Button>
+        <StyledButton>
+            {text}
+            {icon}
+        </StyledButton>
     )
 }
 

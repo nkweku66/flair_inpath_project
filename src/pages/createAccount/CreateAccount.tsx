@@ -2,11 +2,11 @@ import * as S from "./CreateAccount.styles"
 import Button from '../../components/atomicComponenets/Button'
 import Logo from '../../components/atomicComponenets/Logo'
 // import PhoneInput from 'react-phone-number-input'
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { useState } from 'react';
 
 const CreateAccount = () => {
     const [phone, setPhone] = useState<string | undefined>(undefined);
+    
     return (
         <>
             <Logo 
@@ -45,7 +45,7 @@ const CreateAccount = () => {
                 </S.Inputs>
                 <S.SubmitButton to="/verification">
                     <Button
-                        text='Create account'
+                        text="Create account"
                     />
                 </S.SubmitButton>
                 <S.SubText>Already signed up?

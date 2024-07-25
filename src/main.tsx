@@ -7,6 +7,7 @@ import LandingPage from './pages/landingPage/Homepage.tsx'
 import CreateAccount from './pages/createAccount/CreateAccount.tsx'
 import GlobalStyles from './App.styles'
 import Verification from './pages/verification/VerificationPage.tsx'
+import CareerStatus from './pages/careerStatus/CareerStatus.tsx'
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
   {
     path: '/verification',
     element: <Verification />
+  },
+  {
+    path: '/career',
+    element: <CareerStatus />
   }
 
 ])
