@@ -1,12 +1,16 @@
-import { ImageWrapper,Logo } from '../styles/UniversalStyles'
+import { ImageWrapper,Logo, NavContainer } from '../styles/UniversalStyles'
 interface Props {
     children?: JSX.Element;
+    text?: string;
 }
 
 const LogoSection = (props: Props) => {
     return (
         <ImageWrapper>
-            {props.children}
+            <NavContainer>
+                {props.children}
+                {props.text}
+            </NavContainer>
             <Logo src="../images/logo.png"/>
         </ImageWrapper>
     )

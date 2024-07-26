@@ -1,8 +1,8 @@
 import * as S from "./CreateAccount.styles"
 import Button from '../../components/atomicComponenets/Button'
 import Logo from '../../components/atomicComponenets/Logo'
-// import PhoneInput from 'react-phone-number-input'
 import { useState } from 'react';
+
 
 const CreateAccount = () => {
     const [phone, setPhone] = useState<string | undefined>(undefined);
@@ -12,6 +12,7 @@ const CreateAccount = () => {
         <>
             <Logo 
                 children={<S.BackArrow></S.BackArrow>}
+                text="Back"
             />
             <S.Form>
                 <S.Heading>Get started.</S.Heading>
@@ -19,15 +20,17 @@ const CreateAccount = () => {
                     <S.Lable>Fullname</S.Lable>
                     <S.InputField type="text" />
                 </S.Inputs>
-                <S.Inputs>
-                    <S.Lable>Date Of birth</S.Lable>
-                    <S.InputField type="date"/>
-                </S.Inputs>
-                <S.Inputs>
-                    <S.Lable>Gender</S.Lable>
-                    <S.InputField type="gender" placeholder="Select one" />
-                    <S.DropIcon></S.DropIcon>
-                </S.Inputs>
+                <S.InputsWrap>
+                    <S.Inputs>
+                        <S.Lable>Date Of birth</S.Lable>
+                        <S.InputField type="text"/>
+                    </S.Inputs>
+                    <S.Inputs>
+                        <S.Lable>Gender</S.Lable>
+                        <S.InputField type="gender" placeholder="Select one" />
+                        <S.DropIcon  src="../images/caret.png"/>
+                    </S.Inputs>
+                </S.InputsWrap>
                 <S.Inputs>
                     <S.Lable>Email address</S.Lable>
                     <S.InputField type="email" />
@@ -47,6 +50,7 @@ const CreateAccount = () => {
                 <S.SubmitButton to="/verification">
                     <Button
                         text="Create account"
+                        path="/verification"
                     />
                 </S.SubmitButton>
                 <S.SubText>Already signed up?

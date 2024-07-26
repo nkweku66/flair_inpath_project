@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { FaArrowLeft, FaCaretDown, FaEyeSlash } from "react-icons/fa6";
+import { FaArrowLeft, FaEyeSlash } from "react-icons/fa6";
 import PhoneInputWithCountrySelect from "react-phone-number-input";
 import { Link } from 'react-router-dom'
 
@@ -13,11 +13,15 @@ const Form = styled.form`
     justify-content: center;
     padding: 0 1.5em;
     position: relative;
+
+    @media screen and (min-width: 744px) {
+        margin: 56px 164px 0 164px;
+    }
 `
 const Lable = styled.label`
     font-size: .9rem;
     margin-bottom: 6px;
-    color: #E5E5E5;
+    color: #818181;
     text: align
     font-weight: 400;
 `
@@ -32,7 +36,11 @@ const InputField = styled.input`
     font-size: 0.9rem;
     
     &::placeholder{
-        color: #E5E5E5
+        color: #818181;
+    }
+
+    &:hover {
+        outline: 1px solid #0B8659;
     }
 
     &:focus {
@@ -53,12 +61,19 @@ const PasswordIcon = styled(FaEyeSlash)`
     left: 90%;
     font-size: 1.3em;
 `
-const DropIcon = styled(FaCaretDown)`
+const DropIcon = styled.img`
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     left: 90%;
-    font-size: 1.3em;
+    width: 12.73px;
+    height: 7.7px;
+    cursor: pointer;
+
+    @media screen and (min-width: 744px) {
+        top: 55%;
+        left: 85%;
+    }
 
 
 `
@@ -72,6 +87,11 @@ const SubText = styled.span`
     margin-bottom: 16px;
     position: relative;
     top: -2em;
+
+    @media screen and (min-width: 744px) {
+        width: 48%;
+    }
+)
 `
 
 const Phone = styled(PhoneInputWithCountrySelect)`
@@ -123,6 +143,9 @@ const Phone = styled(PhoneInputWithCountrySelect)`
         outline: 2px solid #0B8659;
         border: none;
     }
+    &:hover {
+        border: 1px solid #0B8659;
+    }
 
 `
 
@@ -143,6 +166,17 @@ const BackArrow = styled(FaArrowLeft)`
     font-size: 1.2rem;
 `
 
+const InputsWrap = styled.div`
+    width: 100%;
+
+    @media screen and (min-width: 744px){
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1em;
+    }
+`
+
 export {
     Form,
     Lable,
@@ -155,5 +189,6 @@ export {
     Phone,
     PasswordIcon,
     DropIcon,
-    Inputs
+    Inputs,
+    InputsWrap
 }

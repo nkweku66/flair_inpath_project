@@ -35,18 +35,21 @@ const ImageWrapper = styled.div`
     align-items: center;
     padding: 18px 15px;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-    margin-bottom: 24px;
+    height: 80px;
+
+    @media screen and (min-width: 744px){
+        padding: 0;
+    }
 `
 const Logo = styled.img`
     width: 65px;
     height: 20px;
     margin: 0 auto;
 
-    @media screen and (min-width: 365){
-        width: 28px;
+    @media screen and (min-width: 744px){
+        width: 78px;
         height: 24px;
         margin: 0 auto;
-        border: 1px solid red;
     }
 `
 
@@ -69,6 +72,18 @@ const Circle = styled.svg<{ size?: number }>`
     height: ${(props) => props.size}px;
 `;
 
+const Arrow = styled.div`
+    margin-left: 10px;
+`
+
+const NavContainer = styled.nav`
+    display: flex;
+    gap: .6em;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1em;
+`
+
 
 export {
     StyledButton,
@@ -76,5 +91,7 @@ export {
     Logo,
     Colored,
     CircleWrapper,
-    Circle
+    Circle,
+    Arrow,
+    NavContainer
 }

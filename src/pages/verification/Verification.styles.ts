@@ -8,6 +8,10 @@ const Wrapper = styled.div`
     align-items: center;
     justify-content: center;
     // height: 100vh;
+
+    @media screen and (min-width: 744px) {
+        padding: 169px;
+    }
 `
 
 const VerificationImage = styled.img`
