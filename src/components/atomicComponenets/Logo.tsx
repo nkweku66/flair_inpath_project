@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { ImageWrapper,Logo, NavContainer } from '../styles/UniversalStyles'
 interface Props {
     children?: JSX.Element;
@@ -9,7 +10,7 @@ const LogoSection = (props: Props) => {
         <ImageWrapper>
             <NavContainer>
                 {props.children}
-                {props.text}
+                <Link to="/signup">{props.text}</Link>
             </NavContainer>
             <Logo src="../images/logo.png"/>
         </ImageWrapper>

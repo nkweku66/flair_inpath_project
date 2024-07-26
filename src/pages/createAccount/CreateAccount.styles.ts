@@ -15,8 +15,13 @@ const Form = styled.form`
     position: relative;
 
     @media screen and (min-width: 744px) {
-        margin: 56px 164px 0 164px;
+        padding: 56px 164px 0 164px;
     }
+
+    @media screen and (min-width: 1440px) {
+        padding: 72px 512px 218px 512px;
+    }
+)
 `
 const Lable = styled.label`
     font-size: .9rem;
@@ -26,7 +31,6 @@ const Lable = styled.label`
     font-weight: 400;
 `
 const InputField = styled.input`
-    border: none;
     width: 100%;
     height: 48px;
     border: 1px solid #818181;
@@ -41,6 +45,7 @@ const InputField = styled.input`
 
     &:hover {
         outline: 1px solid #0B8659;
+        border: none;
     }
 
     &:focus {

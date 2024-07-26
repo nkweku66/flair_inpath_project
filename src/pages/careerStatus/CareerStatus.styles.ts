@@ -10,10 +10,13 @@ const Wrapper = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 
     @media screen and (min-width: 744px) {
         padding: 48px 164px;
+    }
+
+    @media screen and (min-width: 1440px) {
+        padding: 72px 512px 428px 512px;
     }
 `
 
@@ -21,6 +24,10 @@ const CareerHeading = styled.h3`
     font-size: 1.2rem;
     font-weight: 600;
     margin-bottom: 2em;
+
+    @media screen and (min-width: 1440px) {
+        font-size: 1.5rem;
+    }
 `
 
 const CareerContainer = styled.div`

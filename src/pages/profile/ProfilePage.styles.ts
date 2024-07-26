@@ -20,7 +20,7 @@ const Wrapper = styled.div`
         justify-content: space-between;
         align-items: flex-start;
         gap: 1.5em;
-        border: 1px solid red;
+        // border: 1px solid red;
     }
 
     @media screen and (min-width: 1440px){
@@ -230,6 +230,7 @@ const ProfileForm = styled.div`
 
     @media screen and (min-width: 1440px) {
         width: 608px;
+        padding-bottom: 328px;
     }
 `
 

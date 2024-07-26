@@ -12,6 +12,10 @@ const Wrapper = styled.div`
     @media screen and (min-width: 744px) {
         padding: 169px;
     }
+
+    @media screen and (min-width: 1440px) {
+        padding: 136px 517px 374px 517px;
+    }
 `
 
 const VerificationImage = styled.img`
