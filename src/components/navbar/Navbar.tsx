@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react"
 import * as S from "./Navbar.styles"
+import Button from "../atomicComponenets/Button"
 
 const NavBar = () => {
     const [openMenu, setOpenMenu] = useState(false)
@@ -33,6 +34,10 @@ const NavBar = () => {
             <S.NavBarContainer>
                 <S.NavBarLogo src="../images/logo.png" />
                 <S.NavBarMenu>
+                    <S.NavButtons>
+                      <Button text="Login" variant visible />
+                      <Button text="Signup" visible/>
+                    </S.NavButtons>
                     <S.HamburgerMenu onClick={toggleMenu} openMenu={openMenu}>
                         <S.HamburgerLines openMenu={openMenu} />
                         <S.HamburgerLineTwo openMenu={openMenu} />

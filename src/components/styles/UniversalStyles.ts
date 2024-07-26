@@ -3,21 +3,23 @@ import styled from 'styled-components'
 
 interface Props {
     bold?: boolean;
+    variant?: boolean;
+    visible?: boolean;
 }
 
-const StyledButton = styled(Link)`
+const StyledButton = styled(Link)<Props>`
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: 700;
     font-family: "EudoxusSans", san-serif;
-    background-color: #000;
-    border: none;
+    background-color: ${(props) => props.variant? '#fff' : '#000'};
+    border: ${(props) => props.variant? '1px solid #E8E8E8' : 'none'};
     border-radius: 2px;
-    color: #fff;
-    margin: 32px 0 62px 0;
-    padding: 14px 0;
+    visibility: ${(props) => props.visible? 'hidden' : ''};
+    color: ${(props) => props.variant? '#000' : '#fff'};
+    padding: 14px 16px;
     cursor: pointer;
     text-decoration: none;
     transition: .5s ease-in-out;
@@ -26,6 +28,9 @@ const StyledButton = styled(Link)`
         background-color: #1d1d1d;
     }
 
+    @media screen and (min-width: 744px){
+        visibility: ${(props) => props.visible? 'visible' : ''};
+    }
 `
 
 const ImageWrapper = styled.div`

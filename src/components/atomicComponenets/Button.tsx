@@ -4,11 +4,13 @@ interface ButtonProps {
     text?: string;
     icon?: JSX.Element;
     path?: string;
+    variant?: boolean;
+    visible?: boolean;
 }
 
-const Button: React.FC<ButtonProps> = ({ text, icon, path }) => {
+const Button: React.FC<ButtonProps> = ({ text, icon, path, variant, visible }) => {
     return (
-        <StyledButton to={path || "/"}>
+        <StyledButton to={path || "/"} variant={variant} visible={visible}>
             {text}
             {icon}
         </StyledButton>

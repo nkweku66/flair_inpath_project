@@ -15,6 +15,11 @@ const Header = styled.header`
     align-items: center;
     position: relative;
     z-index: 99;
+
+    @media screen and (min-width: 744px) {
+        margin: 8px 202.5px 8px 202.5px;
+        width: 339px;
+    }
 `
 
 const HeaderName = styled.h3<NavBarProps>`
@@ -32,6 +37,21 @@ const NavBarContainer = styled.nav`
     padding: 1rem;
     border-top: .5px solid rgba(224, 224, 224, 0.3);
     position: relative;
+    // border: 1px solid red;
+`
+
+const NavButtons = styled.nav`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    height: 48px;
+    // border: 1px solid red;
+    position: absolute;
+    top: 50%;
+    left: 81%;
+    transform: translate(-50%, -50%);
+
 `
 
 const NavBarLogo = styled.img`
@@ -125,5 +145,6 @@ export {
     HamburgerMenu,
     HamburgerLines,
     HamburgerLineTwo,
-    HamburgerLineThree
+    HamburgerLineThree,
+    NavButtons,
 }

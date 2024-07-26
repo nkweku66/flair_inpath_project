@@ -17,6 +17,10 @@ const AccountWrapper = styled.section`
     @media screen and (min-width: 744px){
         padding: 72px 92px;
     }
+
+    @media screen and (min-width: 1440px){
+        padding: 104px 440px 302px 440px;
+    }
 `
 const CardsWrapper = styled.div`
     width: 100%;
