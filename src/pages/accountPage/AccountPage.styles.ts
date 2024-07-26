@@ -8,21 +8,55 @@ interface AccountProps {
     comingSoon?: boolean;
     selected?: boolean;
     onClick?: () => void;
+    heading?: boolean;
 }
 
 const AccountWrapper = styled.section`
     padding: 0 1em;
+
+    @media screen and (min-width: 744px){
+        padding: 72px 92px;
+    }
 `
+const CardsWrapper = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    @media screen and (min-width: 744px){
+        display: grid;
+        grid-template: repeat(2, 176px) / repeat(2, 268px);
+        grid-gap: 24px;
+        margin: 2.5em 0 2.5em 0;
+    }
+`
+
 const ImageWrapper = styled.div`
     padding: 18px 131.5px;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
     margin-bottom: 24px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (min-width: 744px){
+        padding: 0;
+    }
 `
 
 const Logo = styled.img`
     width: 65px;
     height: 20px;
     margin: 0 auto;
+
+    @media screen and (min-width: 744px){
+        width: 78px;
+        height: 24px;
+        margin: 0 auto;
+    }
 `
 const CardImage = styled.img<AccountProps>`
     width: ${(props) => props.width || '76px'};
@@ -47,6 +81,16 @@ const Text = styled.p<AccountProps>`
     padding: ${(props) => props.comingSoon ? ".2em .5em" : ""};
     background-color: ${(props) => props.comingSoon ? "#FCF4E6" : ""};
     color: ${(props) => props.comingSoon ? "#D98F00" : ""};
+
+    @media screen and (min-width: 744px) {
+        font-size: ${(props) => {
+            if (props.textColor) return '.9rem';
+            if (props.heading) return '1.5rem';
+            if (props.comingSoon) return '12px';
+            if (!props.comingSoon || !props.textColor) return "1.1rem";
+        }};
+        left: 66%;
+    }
 `
 const Card = styled.div<AccountProps>`
     background-color: #F5F5F5;
@@ -60,6 +104,7 @@ const Card = styled.div<AccountProps>`
     position: relative;
     cursor: pointer;
     transition: border .5s ease-in-out;
+    width: 100%;
 
     &:active{
         border:2px solid #000; 
@@ -86,7 +131,6 @@ const Button = styled(Link)`
     &:hover{
         background-color: #1d1d1d;
     }
-
 `
 const ButtonArrow = styled(FaArrowRight)`
     font-size: 1.2rem;
@@ -101,5 +145,6 @@ export {
     Card,
     CardImage,
     Button,
-    ButtonArrow
+    ButtonArrow,
+    CardsWrapper
 }

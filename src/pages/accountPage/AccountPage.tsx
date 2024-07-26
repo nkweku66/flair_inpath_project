@@ -40,8 +40,10 @@ const AccountPage = () => {
                 <S.Logo src="../images/logo.png"/>
             </S.ImageWrapper>  
             <S.AccountWrapper>
-                <S.Text>What type of account are you setting up</S.Text>
-                {Cards}
+                <S.Text heading>What type of account are you setting up?</S.Text>
+                <S.CardsWrapper>
+                    {Cards}
+                </S.CardsWrapper>
                 <S.Button to="/create">
                     Next
                     <S.ButtonArrow></S.ButtonArrow>

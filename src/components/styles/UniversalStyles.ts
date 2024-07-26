@@ -42,6 +42,12 @@ const Logo = styled.img`
     height: 20px;
     margin: 0 auto;
 
+    @media screen and (min-width: 365){
+        width: 28px;
+        height: 24px;
+        margin: 0 auto;
+        border: 1px solid red;
+    }
 `
 
 const Colored = styled.span<Props>`
