@@ -11,6 +11,10 @@ const Wrapper = styled.section`
     justify-content: center;
     align-items: center;
     height: 100vh;
+
+    @media screen and (min-width: 744px) {
+        padding: 48px 164px;
+    }
 `
 
 const CareerHeading = styled.h3`
