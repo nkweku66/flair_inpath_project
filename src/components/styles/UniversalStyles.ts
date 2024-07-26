@@ -41,6 +41,7 @@ const Logo = styled.img`
     width: 65px;
     height: 20px;
     margin: 0 auto;
+
 `
 
 const Colored = styled.span<Props>`

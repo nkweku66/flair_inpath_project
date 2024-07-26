@@ -77,6 +77,10 @@ const GlobalStyles = createGlobalStyle`
     body {
         width: 360px;
         font-family: "EudoxusSans", sans-serif;
+
+        @media (width > 360px) {
+            width: 100%;
+        }
     }
 
     h1, h2 {

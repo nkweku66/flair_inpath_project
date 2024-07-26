@@ -3,6 +3,9 @@ import { FaArrowLeft, FaCaretDown, FaEyeSlash } from "react-icons/fa6";
 import PhoneInputWithCountrySelect from "react-phone-number-input";
 import { Link } from 'react-router-dom'
 
+// interface Props {
+//     variant?: boolean;
+// }
 const Form = styled.form`
     display: flex;
     flex-direction: column;
@@ -135,7 +138,6 @@ const Heading = styled.h3`
 const SubmitButton = styled(Link)`
     width: 100%;
     text-decoration: none;
-
 `
 const BackArrow = styled(FaArrowLeft)`
     font-size: 1.2rem;

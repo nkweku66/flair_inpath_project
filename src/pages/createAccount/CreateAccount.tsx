@@ -6,6 +6,7 @@ import { useState } from 'react';
 
 const CreateAccount = () => {
     const [phone, setPhone] = useState<string | undefined>(undefined);
+
     
     return (
         <>
