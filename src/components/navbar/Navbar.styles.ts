@@ -21,7 +21,7 @@ const Header = styled.header`
         width: 339px;
     }
 
-    @media screen and (min-width: 1440px){
+    @media screen and (min-width: 1024px){
         margin: 0 auto;
     }
 `
@@ -43,7 +43,7 @@ const NavBarContainer = styled.nav`
     position: relative;
     // border: 1px solid red;
 
-    @media screen and (min-width: 1440px){
+    @media screen and (min-width: 1024px){
         padding: 27px 72px;
     }
 `
@@ -60,7 +60,7 @@ const NavButtons = styled.nav`
     left: 81%;
     transform: translate(-50%, -50%);
 
-    @media screen and (min-width: 1440px){
+    @media screen and (min-width: 1024px){
         left: 90%;
     }
 
@@ -103,7 +103,7 @@ const NavBarMenuLinks = styled.ul<NavBarProps>`
     box-shadow: 0 0 100px 10000px rgba(0, 0, 0, 0.5);
     transition: height .5s cubic-bezier(.14,.65,.15,1), opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
 
-    @media screen and (min-width: 1440px){
+    @media screen and (min-width: 1024px){
         display: none;
     }
     
@@ -131,7 +131,7 @@ const HamburgerMenu = styled.div<NavBarProps>`
     // position: relative;
     z-index: ${(props) => (props.openMenu ? '2' : 'auto')}
 
-    @media screen and (min-width: 1440px){
+    @media screen and (min-width: 1024px){
         display: none;
         z-index: 0;
     }

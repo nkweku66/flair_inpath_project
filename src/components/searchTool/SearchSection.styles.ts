@@ -126,7 +126,7 @@ const SearchInput = styled.input<SearchProps>`
         color: ${(props) => (props.jobField ? "#000" : "#ABADAE")};
     }
 
-    @media screen and (min-width: 1440px){
+    @media screen and (min-width: 1024px){
         background: none;
         border-radius: 0;
     }
