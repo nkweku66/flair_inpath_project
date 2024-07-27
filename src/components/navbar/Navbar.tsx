@@ -33,6 +33,24 @@ const NavBar = () => {
             </S.Header>
             <S.NavBarContainer>
                 <S.NavLink to="/"><S.NavBarLogo src="../images/logo.png"/></S.NavLink>
+                <S.NavDesktop>
+                  <S.NavBarDeskLink>
+                    <S.NavBarIcons src="../images/job.png" />
+                    <S.NavMenuLink to='/jobs' >Jobs</S.NavMenuLink>
+                  </S.NavBarDeskLink>
+                  <S.NavBarDeskLink>
+                    <S.NavBarIcons src="../images/mentor.png" />
+                    <S.NavMenuLink to='/mentorship' >Mentorship</S.NavMenuLink>
+                  </S.NavBarDeskLink>
+                  <S.NavBarDeskLink>
+                    <S.NavBarIcons src="../images/train.png" />
+                    <S.NavMenuLink to='/trainings'>Trainings</S.NavMenuLink>
+                  </S.NavBarDeskLink>
+                </S.NavDesktop>
+                <S.NavButtons>
+                  <Button text="Login" variant visible />
+                  <Button text="Signup" path="/signup" visible/>
+                </S.NavButtons>
                 <S.NavBarMenu>
                     <S.NavButtons>
                       <Button text="Login" variant visible />
@@ -49,11 +67,6 @@ const NavBar = () => {
                         <S.NavMenuLink to='/trainings' openMenu={openMenu}>Trainings</S.NavMenuLink>
                         <S.NavMenuLink to='/login' openMenu={openMenu}>Login</S.NavMenuLink>
                         <S.NavMenuLink to='/signup' openMenu={openMenu}>Sign Up</S.NavMenuLink>
-                    </S.NavBarMenuLinks>
-                    <S.NavBarMenuLinks visible>
-                      <S.NavMenuLink to='/jobs' openMenu={openMenu}>Jobs</S.NavMenuLink>
-                      <S.NavMenuLink to='/mentorship' openMenu={openMenu}>Mentorship</S.NavMenuLink>
-                      <S.NavMenuLink to='/trainings' openMenu={openMenu}>Trainings</S.NavMenuLink>
                     </S.NavBarMenuLinks>
                 </S.NavBarMenu>
             </S.NavBarContainer>

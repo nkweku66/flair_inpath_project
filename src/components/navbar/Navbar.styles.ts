@@ -46,9 +46,10 @@ const NavBarContainer = styled.nav`
     position: relative;
     // border: 1px solid red;
     text-decoration: none;
+    width: 100%;
 
     @media screen and (min-width: 1024px){
-        padding: 27px 72px;
+        padding: 12px 72px;
     }
 `
 
@@ -65,13 +66,19 @@ const NavButtons = styled.nav`
     transform: translate(-50%, -50%);
 
     @media screen and (min-width: 1024px){
-        left: 90%;
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+        // border: 1px solid red;
+        width: 10%;
     }
 
 `
 
 const NavBarLogo = styled.img`
     height: 1.5em;
+    // border: 1px solid red;
 `
 
 const NavBarMenu = styled.div`
@@ -79,6 +86,10 @@ const NavBarMenu = styled.div`
     flex-direction: column;
     align-items: center;
     gap: .3rem;
+
+    @media screen and (min-width: 1024px){
+        display: none;
+    }
     
 `
 
@@ -108,21 +119,35 @@ const NavBarMenuLinks = styled.ul<NavBarProps>`
     transition: height .5s cubic-bezier(.14,.65,.15,1), opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
 
     @media screen and (min-width: 1024px){
-        display: ${(props) => props.visible? 'flex' : 'none'};
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0;
-        margin: 0;
-        color: #000;
-        position: relative;
-        top: 0;
-        left: 0;
-        transform: translate(0, 0);
-
+        display: none;
     }
-    
 `
+
+const NavDesktop = styled.div`
+    @media screen and (min-width: 1024px){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        width: 100%;
+        gap: 4rem;
+        margin-left: 50px;
+    }
+`
+const NavBarIcons = styled.img`
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+`
+
+const NavBarDeskLink = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .3em;
+    cursor: pointer;
+`
+
 const NavMenuLink = styled(Link)<NavBarProps>`
     text-decoration: none;
     color: #fff;
@@ -132,6 +157,13 @@ const NavMenuLink = styled(Link)<NavBarProps>`
 
     &:hover {
         color: lightGray;
+    }
+
+    @media screen and (min-width: 1024px){
+        color: #000;
+        opacity: 1;
+        visibility: visible;
+        font-size: 14px;
     }
 `
 const NavLink = styled(Link)`
@@ -147,11 +179,10 @@ const HamburgerMenu = styled.div<NavBarProps>`
     // border: 1px solid red;
 
     // position: relative;
-    z-index: ${(props) => (props.openMenu ? '2' : 'auto')}
+    z-index: ${(props) => (props.openMenu ? '2' : 'auto')};
 
     @media screen and (min-width: 1024px){
         display: none;
-        z-index: 0;
     }
 `
 
@@ -186,5 +217,8 @@ export {
     HamburgerLineTwo,
     HamburgerLineThree,
     NavButtons,
-    NavLink
+    NavLink,
+    NavDesktop,
+    NavBarIcons,
+    NavBarDeskLink
 }

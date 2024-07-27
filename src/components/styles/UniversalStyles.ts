@@ -30,6 +30,8 @@ const StyledButton = styled(Link)<Props>`
 
     @media screen and (min-width: 744px){
         visibility: ${(props) => props.visible? 'visible' : ''};
+        width: ${(props) => props.variant? '73px' : '100%'};
+        height: ${(props) => props.variant? '48px' : ''};
     }
 `
 
