@@ -14,7 +14,6 @@ const SearchContainer = styled.section`
     background-color: #F5F5F5;
     padding: 2em 1em;
     position: relative;
-    border: 1px solid red;
 
     @media screen and (min-width: 744px){
         padding: 148px 132px 224px 132px;
