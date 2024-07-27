@@ -42,6 +42,7 @@ const NavBarContainer = styled.nav`
     border-top: .5px solid rgba(224, 224, 224, 0.3);
     position: relative;
     // border: 1px solid red;
+    text-decoration: none;
 
     @media screen and (min-width: 1024px){
         padding: 27px 72px;

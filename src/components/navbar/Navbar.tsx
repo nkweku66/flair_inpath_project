@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react"
 import * as S from "./Navbar.styles"
 import Button from "../atomicComponenets/Button"
+import { Link } from "react-router-dom"
 
 const NavBar = () => {
     const [openMenu, setOpenMenu] = useState(false)
@@ -32,7 +33,7 @@ const NavBar = () => {
                 <S.HeaderName >For Partners</S.HeaderName>
             </S.Header>
             <S.NavBarContainer>
-                <S.NavBarLogo src="../images/logo.png" />
+                <Link to="/"><S.NavBarLogo src="../images/logo.png"/></Link>
                 <S.NavBarMenu>
                     <S.NavButtons>
                       <Button text="Login" variant visible />
