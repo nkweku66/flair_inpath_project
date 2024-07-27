@@ -21,7 +21,7 @@ const SearchContainer = styled.section`
         // background: url("../images/backImage.png") center center /contain;
     }
 
-    @media screeN and (min-width: 1440px){
+    @media screeN and (min-width: 1024px){
         padding: 148px 402px 269px 402px;
     }
 `
@@ -61,7 +61,7 @@ const SearchHeader = styled.h2`
     letter-spacing: -2%;
     font-weight: 500;
 
-    @media screen and (min-width: 1440px){
+    @media screen and (min-width: 1024px){
         font-size: 4rem;
         font-weight: 600;
         letter-spacing: -3px;
@@ -73,7 +73,7 @@ const SearchSubHeader = styled.h2`
     font-weight: 500;
     letter-spacing: -3%;
 
-    @media screen and (min-width: 1440px){
+    @media screen and (min-width: 1024px){
         font-size: 2.25rem;
         font-weight: 600;
         letter-spacing: -3%;
