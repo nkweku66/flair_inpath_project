@@ -18,7 +18,7 @@ const AccountWrapper = styled.section`
         padding: 72px 92px;
     }
 
-    @media screen and (min-width: 1440px){
+    @media screen and (min-width: 1024px){
         padding: 104px 440px 302px 440px;
     }
 `

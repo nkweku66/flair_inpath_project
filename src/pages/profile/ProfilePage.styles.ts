@@ -23,7 +23,7 @@ const Wrapper = styled.div`
         // border: 1px solid red;
     }
 
-    @media screen and (min-width: 1440px){
+    @media screen and (min-width: 1024px){
         padding: 48px 376px 0 104px; 
         justif-content: center;
         gap: 5em;
@@ -119,7 +119,7 @@ const ProfileGreenCard = styled.section`
         }
     }
 
-    @media screen and (min-width: 1440px){
+    @media screen and (min-width: 1024px){
         width: 272px;
         gap: 3em;
     }
@@ -142,7 +142,7 @@ const ProfileAsideDetails = styled.aside`
         height: 100%;
     }
 
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: 1024px) {
         // margin-top: 2rem;
     }
 `
@@ -228,7 +228,7 @@ const ProfileForm = styled.div`
     width: 100%;
     position: relative;
 
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: 1024px) {
         width: 608px;
         padding-bottom: 328px;
     }

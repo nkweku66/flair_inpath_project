@@ -15,7 +15,7 @@ const Wrapper = styled.section`
         padding: 48px 164px;
     }
 
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: 1024px) {
         padding: 72px 512px 428px 512px;
     }
 `
@@ -25,7 +25,7 @@ const CareerHeading = styled.h3`
     font-weight: 600;
     margin-bottom: 2em;
 
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: 1024px) {
         font-size: 1.5rem;
     }
 `
