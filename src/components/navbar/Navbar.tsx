@@ -36,7 +36,7 @@ const NavBar = () => {
                 <S.NavBarMenu>
                     <S.NavButtons>
                       <Button text="Login" variant visible />
-                      <Button text="Signup" visible/>
+                      <Button text="Signup" path="/signup" visible/>
                     </S.NavButtons>
                     <S.HamburgerMenu onClick={toggleMenu} openMenu={openMenu}>
                         <S.HamburgerLines openMenu={openMenu} />

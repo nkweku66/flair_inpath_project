@@ -20,6 +20,10 @@ const Header = styled.header`
         margin: 8px 202.5px 8px 202.5px;
         width: 339px;
     }
+
+    @media screen and (min-width: 1440px){
+        margin: 0 auto;
+    }
 `
 
 const HeaderName = styled.h3<NavBarProps>`
@@ -34,10 +38,14 @@ const NavBarContainer = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 1.5em 1em;
     border-top: .5px solid rgba(224, 224, 224, 0.3);
     position: relative;
     // border: 1px solid red;
+
+    @media screen and (min-width: 1440px){
+        padding: 27px 72px;
+    }
 `
 
 const NavButtons = styled.nav`
@@ -51,6 +59,10 @@ const NavButtons = styled.nav`
     top: 50%;
     left: 81%;
     transform: translate(-50%, -50%);
+
+    @media screen and (min-width: 1440px){
+        left: 90%;
+    }
 
 `
 
@@ -90,6 +102,10 @@ const NavBarMenuLinks = styled.ul<NavBarProps>`
     background-color: #0B8659;
     box-shadow: 0 0 100px 10000px rgba(0, 0, 0, 0.5);
     transition: height .5s cubic-bezier(.14,.65,.15,1), opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+
+    @media screen and (min-width: 1440px){
+        display: none;
+    }
     
 `
 const NavMenuLink = styled(Link)<NavBarProps>`
@@ -114,6 +130,11 @@ const HamburgerMenu = styled.div<NavBarProps>`
 
     // position: relative;
     z-index: ${(props) => (props.openMenu ? '2' : 'auto')}
+
+    @media screen and (min-width: 1440px){
+        display: none;
+        z-index: 0;
+    }
 `
 
 const HamburgerLines = styled.span<NavBarProps>`
