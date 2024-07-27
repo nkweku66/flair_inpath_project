@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 interface NavBarProps {
     selected?: boolean;
     openMenu?: boolean;
+    visible?: boolean;
 }
 
 const Header = styled.header`
@@ -23,6 +24,8 @@ const Header = styled.header`
 
     @media screen and (min-width: 1024px){
         margin: 0 auto;
+        margin-top: 8px;
+        margin-bottom: 8px; 
     }
 `
 
@@ -105,7 +108,18 @@ const NavBarMenuLinks = styled.ul<NavBarProps>`
     transition: height .5s cubic-bezier(.14,.65,.15,1), opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
 
     @media screen and (min-width: 1024px){
-        display: none;
+        display: ${(props) => props.visible? 'flex' : 'none'};
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        color: #000;
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+
     }
     
 `

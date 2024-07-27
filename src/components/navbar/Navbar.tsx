@@ -50,6 +50,11 @@ const NavBar = () => {
                         <S.NavMenuLink to='/login' openMenu={openMenu}>Login</S.NavMenuLink>
                         <S.NavMenuLink to='/signup' openMenu={openMenu}>Sign Up</S.NavMenuLink>
                     </S.NavBarMenuLinks>
+                    <S.NavBarMenuLinks visible>
+                      <S.NavMenuLink to='/jobs' openMenu={openMenu}>Jobs</S.NavMenuLink>
+                      <S.NavMenuLink to='/mentorship' openMenu={openMenu}>Mentorship</S.NavMenuLink>
+                      <S.NavMenuLink to='/trainings' openMenu={openMenu}>Trainings</S.NavMenuLink>
+                    </S.NavBarMenuLinks>
                 </S.NavBarMenu>
             </S.NavBarContainer>
         </>
