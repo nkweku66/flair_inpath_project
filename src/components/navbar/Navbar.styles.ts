@@ -120,6 +120,9 @@ const NavMenuLink = styled(Link)<NavBarProps>`
         color: lightGray;
     }
 `
+const NavLink = styled(Link)`
+    text-decoration: none;
+`
 const HamburgerMenu = styled.div<NavBarProps>`
     width: 1.2em;
     height: 1em;
@@ -169,4 +172,5 @@ export {
     HamburgerLineTwo,
     HamburgerLineThree,
     NavButtons,
+    NavLink
 }
