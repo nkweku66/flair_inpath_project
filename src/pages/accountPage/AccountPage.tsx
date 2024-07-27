@@ -40,7 +40,7 @@ const AccountPage = () => {
                 <S.Logo src="../images/logo.png"/>
             </S.ImageWrapper>  
             <S.AccountWrapper>
-                <S.Text heading>What type of account are you setting up?</S.Text>
+                <S.Heading>What type of account are you setting up?</S.Heading>
                 <S.CardsWrapper>
                     {Cards}
                 </S.CardsWrapper>

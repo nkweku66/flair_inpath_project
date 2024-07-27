@@ -13,6 +13,7 @@ interface AccountProps {
 
 const AccountWrapper = styled.section`
     padding: 0 1em;
+    width: 100%;
 
     @media screen and (min-width: 744px){
         padding: 72px 92px;
@@ -67,7 +68,14 @@ const CardImage = styled.img<AccountProps>`
     height: 56px;
     margin-bottom: 1em;
 `
+const Heading = styled.h3`
+    font-weight: 600;
+    font-size: 1.1rem;
 
+    @media screen and (min-width: 1024px){
+        font-size: 1.5rem;
+    }
+`
 const Text = styled.p<AccountProps>`
     font-weight: ${(props) => (props.textColor ? '' : '600')};
     font-size: ${(props) => {
@@ -89,7 +97,6 @@ const Text = styled.p<AccountProps>`
     @media screen and (min-width: 744px) {
         font-size: ${(props) => {
             if (props.textColor) return '.9rem';
-            if (props.heading) return '1.5rem';
             if (props.comingSoon) return '12px';
             if (!props.comingSoon || !props.textColor) return "1.1rem";
         }};
@@ -150,5 +157,6 @@ export {
     CardImage,
     Button,
     ButtonArrow,
-    CardsWrapper
+    CardsWrapper,
+    Heading
 }
