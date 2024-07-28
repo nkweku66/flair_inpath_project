@@ -20,7 +20,7 @@ const AccountWrapper = styled.section`
     }
 
     @media screen and (min-width: 1024px){
-        padding: 104px 440px 302px 440px;
+        padding: 98px 393px 302px 393px;
     }
 `
 const CardsWrapper = styled.div`
@@ -34,7 +34,10 @@ const CardsWrapper = styled.div`
         display: grid;
         grid-template: repeat(2, 176px) / repeat(2, 268px);
         grid-gap: 24px;
+        justify-content: space-between;
+        align-items: flex-end;
         margin: 2.5em 0 2.5em 0;
+        // border: 1px solid red;
     }
 `
 
@@ -122,17 +125,17 @@ const Card = styled.div<AccountProps>`
     }
 `
 
-const Button = styled(Link)`
+const Button = styled(Link)<AccountProps>`
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: 700;
     font-family: "EudoxusSans", san-serif;
-    background-color: #000;
+    background-color: ${(props) => props.selected ? '#000' : '#E8E8E8'};
     border: none;
     border-radius: 2px;
-    color: #fff;
+    color: ${(props) => props.selected ? '#fff' : '#818181'};
     margin: 32px 0 62px 0;
     padding: 14px 0;
     cursor: pointer;

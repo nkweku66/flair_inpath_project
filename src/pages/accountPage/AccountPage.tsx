@@ -44,7 +44,7 @@ const AccountPage = () => {
                 <S.CardsWrapper>
                     {Cards}
                 </S.CardsWrapper>
-                <S.Button to="/create">
+                <S.Button to="/create" selected={selectCardIndex !== null}>
                     Next
                     <S.ButtonArrow></S.ButtonArrow>
                 </S.Button>
