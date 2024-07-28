@@ -77,6 +77,7 @@ const GlobalStyles = createGlobalStyle`
     body {
         width: 360px;
         font-family: "EudoxusSans", sans-serif;
+        overflow-x: hidden;
 
         @media (width > 360px) {
             width: 100%;

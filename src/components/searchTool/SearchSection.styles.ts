@@ -1,5 +1,5 @@
-import { FaAngleDown, FaArrowRight, FaMagnifyingGlass } from "react-icons/fa6"
-import styled from "styled-components"
+import { FaArrowRight } from "react-icons/fa6";
+import styled, { keyframes } from "styled-components"
 
 interface SearchProps{
     jobField?: boolean,
@@ -7,6 +7,7 @@ interface SearchProps{
     variant2?: boolean
     position?: boolean;
     variant?: boolean;
+    first?: boolean;
 }
 
 const SearchContainer = styled.section`
@@ -21,30 +22,92 @@ const SearchContainer = styled.section`
     }
 
     @media screeN and (min-width: 1024px){
-        padding: 148px 402px 269px 402px;
+        padding: 181px 380px 269px 380px;
     }
 `
-const SearchAreaImage = styled.img<SearchProps>`
-    width: ${(props) => (props.variant1 ? '32px' : '48px')};
-    height: ${(props) => (props.variant1 ? '32px' : '48px')};
-    margin: ${(props) => (props.variant1 || props.variant2 ? "" : "0 130px 16px 182px")};
-    object-fit: cover;
-    position: ${(props) => (props.variant1 ? "absolute" : "relative")};
-    top: ${(props) => (props.variant1 ? "37%" : "")};
-    left: ${(props) => { 
-        if (props.variant1) return "88%";
-        if (props.variant2) return "9%";
-    }};
-    transform: ${(props) => (props.variant1 ? "translate(-50%, -50%)" : "")};
+const SearchAreaImage = styled.img`
+    position: absolute;
+`
 
-    @media screen and (min-width: 744px){
-        width: 100%;
-        height: 519px;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+const scaleUp = keyframes`
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
     }
 `
+
+const SearchedAreaImageOne = styled(SearchAreaImage)`
+    width: 113px;
+    top: 51px;
+    left: 1062px;
+    animation: ${scaleUp} 2s ease-in-out forwards;
+`
+
+const SearchedAreaImageTwo = styled(SearchAreaImage)`
+    width: 51px;
+    top: 264px;
+    left: 1282px;
+    animation: ${scaleUp} 2.5s ease-in-out forwards;
+`
+
+const SearchedAreaImageThree = styled(SearchAreaImage)`
+    width: 114px;
+    top: 255.67px;
+    left: 146px;
+    animation: ${scaleUp} 3s ease-in-out forwards;
+`
+
+const SearchedAreaImageFour = styled(SearchAreaImage)`
+    width: 51px;
+    top: 500px;
+    left: 72px;
+    animation: ${scaleUp} 3.5s ease-in-out forwards;
+`
+
+const SearchedAreaImageFive = styled(SearchAreaImage)`
+    width: 84px;
+    top: 551px;
+    left: 292px;
+    animation: ${scaleUp} 3.8s ease-in-out forwards;
+`
+
+const SearchedAreaImageSix = styled(SearchAreaImage)`
+    width: 78.36px;
+    top: 540.67px;
+    left: 601.64px;
+    animation: ${scaleUp} 4s ease-in-out forwards;
+`
+
+const SearchedAreaImageSeven = styled(SearchAreaImage)`
+    width: 71px;
+    top: 599px;
+    left: 857px;
+    animation: ${scaleUp} 4.3s ease-in-out forwards;
+`
+
+const SearchedAreaImageEight = styled(SearchAreaImage)`
+    width: 44px;
+    top: 473px;
+    left: 1172px;
+    z-index: 1;
+    animation: ${scaleUp} 4.5s ease-in-out forwards;
+`
+
+const SearchedAreaImageNine = styled(SearchAreaImage)`
+    top: 339px;
+    left: 1159px;
+    width: 288px;
+    height: 251px;
+`
+
 const SearchHeadingsWrapper = styled.div`
     display: flex;
     flex-direction: column;
@@ -53,7 +116,6 @@ const SearchHeadingsWrapper = styled.div`
     gap: 1em;
     margin-bottom: 40px;
     width: 100%;
-
 `
 const SearchHeader = styled.h2`
     font-size: 1.8rem;
@@ -61,8 +123,8 @@ const SearchHeader = styled.h2`
     font-weight: 500;
 
     @media screen and (min-width: 1024px){
-        font-size: 4rem;
-        font-weight: 600;
+        font-size: 3.8rem;
+        font-weight: 900;
         letter-spacing: -3px;
     }
 `
@@ -74,8 +136,8 @@ const SearchSubHeader = styled.h2`
 
     @media screen and (min-width: 1024px){
         font-size: 2.25rem;
-        font-weight: 600;
-        letter-spacing: -3%;
+        font-weight: 500;
+        letter-spacing: -1px;
     }
 `
 
@@ -120,14 +182,20 @@ const SearchInput = styled.input<SearchProps>`
     font-family: "EudoxusSans", sans-serif;
     font-size: 1rem;
     font-weight: 500;
+    position: relative;
 
     &::placeholder {
         color: ${(props) => (props.jobField ? "#000" : "#ABADAE")};
     }
 
     @media screen and (min-width: 1024px){
-        background: none;
-        border-radius: 0;
+        background: transparent;
+        outline: none;
+        border-radius: 40px 0 0 40px;
+        border-right: ${(props) => props.jobField? '' : '2px solid rgba(212, 212, 212, 1)'};
+        height: 26px;
+        width: ${(props) => props.first? '66%' : '144px'};
+        padding-left: ${(props) => (props.jobField ? "1em" : "2em")};
     }
 `
 
@@ -141,6 +209,8 @@ const SearchButton = styled.button`
     cursor: pointer;
     
     @media screen and (min-width: 744px){
+        width: 40px;
+        height: 40px;
         position: absolute;
         top: 82%;
         left: 98%;
@@ -148,35 +218,26 @@ const SearchButton = styled.button`
     }
 `
 // Icons
-const SearchFinder = styled(FaMagnifyingGlass)`
-    color: #818181;
-    font-size: 1.3rem;
-    position: absolute;
-    top: 50%;
-    left: 8%;
-    transform: translate(-50%, -50%);
-
-    @media screen and (min-width: 744px){
-        left: 5%;
-    }
-
-`
 const SearchArrowIcon = styled(FaArrowRight)`
     font-size: 1rem;
     color: #fff;
 `
-const SearchDropdown = styled(FaAngleDown)`
+const SearchFinder = styled(SearchAreaImage)`
+    width: 24px;
     color: #000;
     position: absolute;
     top: 50%;
-    left: 92%;
+    left: 5%;
     transform: translate(-50%, -50%);
 `
 
+const DropDown = styled(SearchAreaImage)`
+    width: 13px;
+    left: 85%;
+    top: 50%;
+    z-index: 1;
+`
 
-
-// const SearchJob = styled.input`
-// `
 export {
     SearchContainer,
     SearchAreaImage,
@@ -189,6 +250,15 @@ export {
     SearchButton,
     SearchArrowIcon,
     SearchFinder,
-    SearchDropdown,
-    SearchInputWrapper
+    SearchInputWrapper,
+    SearchedAreaImageOne,
+    SearchedAreaImageTwo,
+    SearchedAreaImageThree,
+    SearchedAreaImageFour,
+    SearchedAreaImageFive,
+    SearchedAreaImageSix,
+    SearchedAreaImageSeven,
+    SearchedAreaImageEight,
+    SearchedAreaImageNine,
+    DropDown
 }
