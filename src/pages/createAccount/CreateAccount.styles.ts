@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { FaArrowLeft, FaEyeSlash } from "react-icons/fa6";
+import { FaArrowLeft } from "react-icons/fa6";
 import PhoneInputWithCountrySelect from "react-phone-number-input";
 import { Link } from 'react-router-dom'
 
@@ -19,7 +19,7 @@ const Form = styled.form`
     }
 
     @media screen and (min-width: 1024px) {
-        padding: 72px 512px 218px 512px;
+        padding: 72px 500px 218px 500px;
     }
 )
 `
@@ -33,7 +33,7 @@ const Lable = styled.label`
 const InputField = styled.input`
     width: 100%;
     height: 48px;
-    border: 1px solid #818181;
+    border: 1px solid #E8E8E8;
     padding: 10px;
     margin-bottom: 16px;
     font-family: "EudoxusSans", san-serif;
@@ -59,7 +59,8 @@ const Inputs = styled.section`
     width: 100%;
 `
 
-const PasswordIcon = styled(FaEyeSlash)`
+const PasswordIcon = styled.img`
+    width: 24px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -95,6 +96,12 @@ const SubText = styled.span`
 
     @media screen and (min-width: 744px) {
         width: 48%;
+    }
+
+    @media screen and (min-width: 1024px){
+        margin-top: 1.5em;
+        width: 50%;
+        top: 0;
     }
 )
 `

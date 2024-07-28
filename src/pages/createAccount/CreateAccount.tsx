@@ -45,12 +45,13 @@ const CreateAccount = () => {
                 <S.Inputs>
                     <S.Lable>Password</S.Lable>
                     <S.InputField type="password"/>
-                    <S.PasswordIcon></S.PasswordIcon>
+                    <S.PasswordIcon src="../images/eye.png"/>
                 </S.Inputs>
                 <S.SubmitButton to="/verification">
                     <Button
                         text="Create account"
                         path="/verification"
+
                     />
                 </S.SubmitButton>
                 <S.SubText>Already signed up?

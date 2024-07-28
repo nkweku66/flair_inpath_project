@@ -9,6 +9,7 @@ interface AccountProps {
     selected?: boolean;
     onClick?: () => void;
     heading?: boolean;
+    disabled?: boolean;
 }
 
 const AccountWrapper = styled.section`
@@ -107,7 +108,7 @@ const Text = styled.p<AccountProps>`
     }
 `
 const Card = styled.div<AccountProps>`
-    background-color: #F5F5F5;
+    background-color: ${(props) => props.selected? '#E8E8E8' : '#F5F5F5'};
     padding: 16px;
     outline: ${(props) => props.selected ? "2px solid #0B8659" : "1px solid #818181"}; ;
     display: flex;
@@ -119,10 +120,6 @@ const Card = styled.div<AccountProps>`
     cursor: pointer;
     transition: border .5s ease-in-out;
     width: 100%;
-
-    &:active{
-        border:2px solid #000; 
-    }
 `
 
 const Button = styled(Link)<AccountProps>`
@@ -136,6 +133,7 @@ const Button = styled(Link)<AccountProps>`
     border: none;
     border-radius: 2px;
     color: ${(props) => props.selected ? '#fff' : '#818181'};
+    pointer-events: ${props => props.disabled ? 'none' : 'auto'};
     margin: 32px 0 62px 0;
     padding: 14px 0;
     cursor: pointer;
