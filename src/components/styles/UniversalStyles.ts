@@ -24,10 +24,6 @@ const StyledButton = styled(Link)<Props>`
     text-decoration: none;
     transition: .5s ease-in-out;
 
-    &:hover{
-        background-color: #1d1d1d;
-    }
-
     @media screen and (min-width: 744px){
         visibility: ${(props) => props.visible? 'visible' : ''};
         width: ${(props) => props.variant? '73px' : '100%'};
