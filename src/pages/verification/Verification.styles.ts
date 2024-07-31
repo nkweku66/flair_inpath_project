@@ -14,7 +14,7 @@ const Wrapper = styled.div`
     }
 
     @media screen and (min-width: 1024px) {
-        padding: 136-mpx 517px 374px 517px;
+        padding: 120px 517px 374px 517px;
     }
 `
 
