@@ -16,7 +16,7 @@ const Wrapper = styled.section`
     }
 
     @media screen and (min-width: 1024px) {
-        padding: 72px 512px 428px 512px;
+        padding: 72px 470px 428px 470px;
     }
 `
 
@@ -37,6 +37,7 @@ const CareerContainer = styled.div`
     align-items: center;
     width: 100%;
     height: 100%;
+    margin-bottom: 1em;
 `
 
 const CareerButton = styled.button<CareerProps>`
@@ -50,7 +51,7 @@ const CareerButton = styled.button<CareerProps>`
     color: ${props => props.color || "#000"};
     font-family: inherit;
     font-weight: 600;
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
     cursor: pointer;
     transition: background .3s ease-in-out, color .3s ease-in-out;
 
