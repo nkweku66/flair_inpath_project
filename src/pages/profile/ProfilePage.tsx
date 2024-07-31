@@ -3,6 +3,7 @@ import Logo from "../../components/atomicComponenets/Logo"
 import { profileDetails } from "../../assets/dataSource/data"
 import ProgressCircle from "../../components/atomicComponenets/ProgressCircle"
 import { useState } from "react"
+import Education from "../../components/atomicComponenets/popUp/education/Education"
 
 
 const ProfilePage = () => {
@@ -52,11 +53,8 @@ const ProfilePage = () => {
                 </S.ProfileGreenCard>
                 <S.ProfileForm>
                     <S.ProfileHeading variant>Set up your profile.</S.ProfileHeading>
-                    {/* <S.ProfileGreenCard>
-                        Profile Completion
-                        <ProgressCircle percentage={0} size={60} strokeWidth={7} />
-                    </S.ProfileGreenCard> */}
                     {ProfileCard}
+                    <Education />
                     <S.ProfileBtnContainer>
                         <S.ProfileBtn>i'll do it later</S.ProfileBtn>
                         <S.ProfileBtn variant>Done</S.ProfileBtn>

@@ -19,7 +19,7 @@ const Form = styled.form`
     }
 
     @media screen and (min-width: 1024px) {
-        padding: 72px 500px 218px 500px;
+        padding: 72px 470px 218px 470px;
     }
 )
 `
@@ -61,7 +61,7 @@ const DropIcon = styled.img`
 `
 const SubText = styled.span`
     display: flex;
-    width: 58%;
+    // width: 58%;
     justify-content: space-between;
     align-items: flex-end;
     cursor: pointer;
@@ -71,12 +71,13 @@ const SubText = styled.span`
     top: -2em;
 
     @media screen and (min-width: 744px) {
-        width: 48%;
+        // width: 48%;
+        gap: .5em;
     }
 
     @media screen and (min-width: 1024px){
         margin-top: 1.5em;
-        width: 50%;
+        gap: .5em;
         top: 0;
     }
 )
@@ -139,6 +140,7 @@ const Phone = styled(PhoneInputWithCountrySelect)`
 
 const Colored = styled.span`
     color: #0B8659;
+    font-weight: 600;
 `
 
 const Heading = styled.h3`
@@ -149,6 +151,8 @@ const Heading = styled.h3`
 const SubmitButton = styled(Link)`
     width: 100%;
     text-decoration: none;
+    margin-top: 1em;
+    margin-bottom: 1em;
 `
 const BackArrow = styled(FaArrowLeft)`
     font-size: 1.2rem;
