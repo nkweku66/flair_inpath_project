@@ -2,6 +2,7 @@ import * as S from "./CreateAccount.styles"
 import Button from '../../components/atomicComponenets/Button'
 import Logo from '../../components/atomicComponenets/Logo'
 import { useState } from 'react';
+import InputField from '../../components/atomicComponenets/inputField/InputField'
 
 
 const CreateAccount = () => {
@@ -16,25 +17,28 @@ const CreateAccount = () => {
             />
             <S.Form>
                 <S.Heading>Get started.</S.Heading>
-                <S.Inputs>
-                    <S.Lable>Fullname</S.Lable>
-                    <S.InputField type="text" />
-                </S.Inputs>
+                <InputField
+                    label="Fullname"
+                    type="text" 
+                />
                 <S.InputsWrap>
+                    <InputField
+                        label="Date of Birth"
+                        type="text" 
+                    />
                     <S.Inputs>
-                        <S.Lable>Date Of birth</S.Lable>
-                        <S.InputField type="text"/>
-                    </S.Inputs>
-                    <S.Inputs>
-                        <S.Lable>Gender</S.Lable>
-                        <S.InputField type="gender" placeholder="Select one" />
+                        <InputField
+                            label="Gender"
+                            type="text"
+                            placeholder="Select one"
+                        />
                         <S.DropIcon  src="../images/caret.png"/>
                     </S.Inputs>
                 </S.InputsWrap>
-                <S.Inputs>
-                    <S.Lable>Email address</S.Lable>
-                    <S.InputField type="email" />
-                </S.Inputs>
+                <InputField
+                    label="Email address"
+                    type="email"
+                />
                 <S.Inputs>
                     <S.Lable>Phone number</S.Lable>
                     <S.Phone
@@ -43,15 +47,16 @@ const CreateAccount = () => {
                     />
                 </S.Inputs>
                 <S.Inputs>
-                    <S.Lable>Password</S.Lable>
-                    <S.InputField type="password"/>
+                    <InputField
+                        label="Password"
+                        type="password"
+                    />
                     <S.PasswordIcon src="../images/eye.png"/>
                 </S.Inputs>
                 <S.SubmitButton to="/verification">
                     <Button
                         text="Create account"
                         path="/verification"
-
                     />
                 </S.SubmitButton>
                 <S.SubText>Already signed up?

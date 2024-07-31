@@ -30,30 +30,6 @@ const Lable = styled.label`
     text: align
     font-weight: 400;
 `
-const InputField = styled.input`
-    width: 100%;
-    height: 48px;
-    border: 1px solid #E8E8E8;
-    padding: 10px;
-    margin-bottom: 16px;
-    font-family: "EudoxusSans", san-serif;
-    font-size: 0.9rem;
-    
-    &::placeholder{
-        color: #818181;
-    }
-
-    &:hover {
-        outline: 1px solid #0B8659;
-        border: none;
-    }
-
-    &:focus {
-        outline: 2px solid #0B8659;
-        border: none;
-    }
-`
-
 const Inputs = styled.section`
     position: relative;
     width: 100%;
@@ -62,9 +38,9 @@ const Inputs = styled.section`
 const PasswordIcon = styled.img`
     width: 24px;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 90%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    left: 93%;
     font-size: 1.3em;
 `
 const DropIcon = styled.img`
@@ -192,7 +168,6 @@ const InputsWrap = styled.div`
 export {
     Form,
     Lable,
-    InputField,
     SubmitButton,
     BackArrow,
     Heading,
